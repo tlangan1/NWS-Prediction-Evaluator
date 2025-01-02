@@ -1,13 +1,103 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./colors.css";
+
+html {
+  box-sizing: border-box;
+  color: var(--primary-font-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::before,
+::after,
+* {
+  box-sizing: inherit;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: var(--emphasis-color);
+}
+
+textarea {
+  resize: none;
+}
+
+nav.nav-using-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid #e6e6e6;
+}
+
+a.navlink {
+  text-decoration: none;
+  color: var(--primary-font-color);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+a.navlink:hover {
+  color: var(--emphasis-color);
+  background-color: var(--emphasis-background-color);
+  height: 100%;
+}
+
+.route {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button.action-button {
+  background: rgb(240, 240, 240);
+  color: var(--primary-font-color);
+  border: solid var(--primary-font-color);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+button.action-button:disabled {
+  border: 1px solid var(--disabled-button-border-color);
+  background-color: var(--disabled-button-background-color);
+  color: var(--disabled-button-color);
+  cursor: not-allowed;
+}
+
+button.action-button:hover {
+  border: solid var(--secondary-background-color);
+  background-color: #00aacc;
+  color: var(--primary-background-color);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 500px;
+}
+
+table th,
+td {
+  border: 1px solid var(--primary-font-color);
+  padding: 0.5rem;
+  width: 100px;
 }
