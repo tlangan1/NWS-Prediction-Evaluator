@@ -12,7 +12,7 @@ export function Header(props: Object) {
             onClick={() => setItemType("objective")}
             href="/"
           >
-            <img src="/home.svg" />{" "}
+            <img src="./home.svg" />{" "}
           </a>
           <h1>
             <a class="navlink" href="/filters">
@@ -20,7 +20,7 @@ export function Header(props: Object) {
             </a>
           </h1>
           <a class="navlink" id="linkOrder" href="/account">
-            <img src="/account.svg" />{" "}
+            <img src="./account.svg" />{" "}
           </a>
         </nav>
       </header>
